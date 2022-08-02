@@ -2,7 +2,7 @@
 
     class conn{
 
-        public function connect(){
+        public static function connect(){
 
             $usuario = 'root';
             $senha = '';

@@ -1,7 +1,5 @@
 <?php
  
-    var_dump($_POST);
-
     include_once 'conn.class.php';
     
     class item {
@@ -70,22 +68,23 @@
 
         public function inserir_item(){
 
-            $pdo = $this->connect();
+            $pdo = conn::connect();
 
-                if($this->ingr_id !== null && $this->ingr_id != ''){
+                // if($this->ingr_id !== null && $this->ingr_id != ''){
 
-                    $sql = 'UPDATE item
-                            SET nome = :nome, descr = :descr, prec = :prec, cate = :cate
-                            WHERE id = :id';
-                }else{
+                //     $sql = 'UPDATE item
+                //             SET nome = :nome, descr = :descr, prec = :prec, cate = :cate
+                //             WHERE id = :id';
+                // }else{
 
                     $sql = 'INSERT INTO item
                             (nome, descr, prec, cate)
                             VALUES(:nome, :descr, :prec, :cate)';
                     
                     
-                }
+                //}
 
+                //die($sql);
                 $resultado = $pdo->prepare($sql);
 
                     $resultado->bindValue(':nome', $this->item_nome);
@@ -93,15 +92,15 @@
                     $resultado->bindValue(':prec', $this->item_prec);
                     $resultado->bindValue(':cate', $this->item_cate);
 
-                    if($this->item_id !== null && $this->item_id != ''){
+                    // if($this->item_id !== null && $this->item_id != ''){
 
-                        $resultado->bindValue(':id', $this->item_id);
+                    //     $resultado->bindValue(':id', $this->item_id);
 
-                    }
+                    // }
 
                 $resultado->execute();
                 
-            $pdo = $this->disconnect();
+            $pdo = conn::disconnect();
 
         }
 
@@ -158,5 +157,4 @@
         }
 
     }
-
 ?>
