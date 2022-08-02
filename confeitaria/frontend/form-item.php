@@ -41,34 +41,34 @@
     <div class="container">
       <h1 class="h3 mb-3 fw-normal">Cadastrar produto</h1>
       
-      <form method="POST" action="salvar-item">
+      <form method="POST" action="../backend/salvar-item.php">
         
         <div class="input-group mb-3">
-          <input type="text" class="form-control nome-produto" name="nome-produto" placeholder="Nome do produto" aria-label="Username">
+          <input type="text" class="form-control nome-produto" name="item_nome" placeholder="Nome do produto" aria-label="Username">
         </div>
 
         <div class="form-group">
-            <label for="exampleFormControlTextarea1 descricao-produto">Descrição do produto</label>
-            <textarea class="form-control" name="descricao-produto" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <label for="exampleFormControlTextarea1 item_descr">Descrição do produto</label>
+            <textarea class="form-control" name="item_descr" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
 
-        <div class="input-group mb-3 preco-produto">
+        <div class="input-group mb-3 item_descr">
           <span class="input-group-text">$</span>
-          <input type="number" class="form-control" name="preco-produto">
+          <input type="number" class="form-control" name="item_prec">
           <span class="input-group-text">.00</span>
         </div>
 
-        <div class="form-group categoria-produto">
+        <div class="form-group item_cate">
           <label for="categoria">Categoria do produto</label>
-          <select class="form-control" name="categoria-produto" id="exampleFormControlSelect1">
+          <select class="form-control" name="item_cate" id="exampleFormControlSelect1">
             <option value="doces">Doces</option>
             <option value="salgados">Salgados</option>
             <option value="tortas">Tortas</option>
           </select>
           
-          <div class="foto-produto">
+          <div class="item_foto">
             <label for="inputGroupFile02">Envie uma foto do produto</label>
-            <input type="file" class="form-control" name="foto-produto" id="inputGroupFile02">
+            <input type="file" class="form-control" name="item_foto" id="inputGroupFile02">
           </div>
           
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">

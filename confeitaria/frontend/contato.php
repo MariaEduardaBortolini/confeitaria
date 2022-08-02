@@ -41,21 +41,21 @@
     <div class="container">
       <h1 class="h3 mb-3 fw-normal">Fale conosco</h1>
       
-      <form method="POST" action="salvar-item">
+      <form method="POST" action="../backend/salvar-contato.php">
         
         <div class="mb-3">
             <label for="nome-mensagem" class="form-label">Informe seu nome</label>
-            <input type="text" class="form-control nome-mensagem" name="nome-mensagem" aria-label="Username">
+            <input type="text" class="form-control nome-mensagem" name="cont_nome" aria-label="Username">
         </div>
 
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Email</label>
-            <input type="email" class="form-control email-mensagem" name="email-mensagem" id="exampleFormControlInput1" placeholder="name@example.com">
+            <input type="email" class="form-control email-mensagem" name="cont_email" id="exampleFormControlInput1" placeholder="name@example.com">
         </div>
 
         <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Mensagem</label>
-            <textarea class="form-control conteudo-mensagem" name="conteudo-mensagem" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea class="form-control conteudo-mensagem" name="cont_mensagem" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
           
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">

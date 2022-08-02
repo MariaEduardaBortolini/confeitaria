@@ -41,20 +41,20 @@
     <div class="container">
       <h1 class="h3 mb-3 fw-normal">Criar uma conta</h1>
       
-      <form method="POST" action="salvar-user">
+      <form method="POST" action="../backend/salvar-cadastro.php">
 
         <div class="mb-3">
             <label for="nome-usuario" class="form-label">Informe seu nome</label>
-            <input type="text" class="form-control nome-usuario" name="name-usuario" aria-label="Username">
+            <input type="text" class="form-control nome-usuario" name="cadastro_nome" aria-label="Username">
         </div>  
         
         <div class="mb-3">
             <label for="email-usuario" class="form-label">Informe seu email</label>
-            <input type="email" class="form-control" name="email-usuario" id="email-usuario" aria-describedby="emailHelp">
+            <input type="email" class="form-control" name="cadastro_email" id="email-usuario" aria-describedby="emailHelp">
         </div>
         <div class="mb-3">
             <label for="senha-usuario" class="form-label">Informe sua senha</label>
-            <input type="password" class="form-control" name="senha-usuario" id="senha-usuario">
+            <input type="password" class="form-control" name="cadastro_senha" id="senha-usuario">
         </div>
         
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
